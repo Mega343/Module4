@@ -3,10 +3,10 @@ package com.goit.gojavaonline.module4;
 
 public class Calculate {
 
-public static double Calc(double r){
+public static double calcCircle(Figure name){
     double result;
     final double PI = 3.14;
-    result = PI*r*r;
+    result = PI*name.getR()*name.getR();
     if(result <= 0){
         System.out.println("Такого круга не существует.");
         }
@@ -15,9 +15,9 @@ public static double Calc(double r){
     return result;
     }
 
-    public static double Calc(double a, double b){
+    public static double calcRectangle(Figure name){
         double result;
-        result = a * b;
+        result = name.getA() * name.getB();
         if(result <= 0){
             System.out.println("Такого прямоугольника не существует.");
         }
@@ -26,11 +26,11 @@ public static double Calc(double r){
         return  result;
     }
 
-    public static double Calc(double a, double b, double c){
+    public static double calcTriangle(Figure name){
         double result, p;
-        p = (a + b + c )/2;
-        result = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-        if(p <= a || p <= b || p <= c ){
+        p = (name.getA() + name.getB() + name.getC() )/2;
+        result = Math.sqrt(p * (p - name.getA()) * (p - name.getB()) * (p - name.getC()));
+        if(p <= name.getA() || p <= name.getB() || p <= name.getC() ){
             System.out.println("Такого треугольника не существует.");
         }
         else
