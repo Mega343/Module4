@@ -7,14 +7,13 @@ public class Main {
 
     public static void main(String[] args){
 
-        Figure circle = new Figure(2.0);
-        Figure rectangle = new Figure(2, 3);
-        Figure triangle = new Figure(1, 5, 7);
+        Circle circle = new Circle(2.0);
+        Rectangle rectangle = new Rectangle(2, 3);
+        Triangle triangle = new Triangle(2, 3, 2);
 
-        Calculate calculate = new Calculate();
-        calculate.calcCircle(circle);
-        calculate.calcRectangle(rectangle);
-        calculate.calcTriangle(triangle);
+        circle.square(circle);
+        triangle.square(triangle);
+        rectangle.square(rectangle);
 
 
     }
