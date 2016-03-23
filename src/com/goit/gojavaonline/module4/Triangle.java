@@ -37,14 +37,19 @@ public class Triangle implements Figure{
 
     @Override
     public double square(Figure name) {
+
         double result, p;
         p = (name.getA() + name.getB() + name.getC() )/2;
         result = Math.sqrt(p * (p - name.getA()) * (p - name.getB()) * (p - name.getC()));
         if(p <= name.getA() || p <= name.getB() || p <= name.getC() ){
-            System.out.println("Такого треугольника не существует.");
+            try {
+                throw new InvalidParametersOfFigureException();
+            } catch (InvalidParametersOfFigureException e) {
+                System.out.println("Invalid figure parametrs. This triangle does not exist");
+            } return -1;
         }
         else
-            System.out.println("Площадь треугольника = "  + result);
+
         return result;
     }
 

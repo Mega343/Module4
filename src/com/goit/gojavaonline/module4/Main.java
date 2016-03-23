@@ -9,14 +9,11 @@ public class Main {
 
         Circle circle = new Circle(2.0);
         Rectangle rectangle = new Rectangle(2, 3);
-        Triangle triangle = new Triangle(2, 3, 2);
+        Triangle triangle = new Triangle(6, 3, 2);
 
-        circle.square(circle);
-        triangle.square(triangle);
-        rectangle.square(rectangle);
-
+        System.out.println("Square of circle is: " + circle.square(circle));
+        System.out.println("Squre is triangle is: " + triangle.square(triangle));
+        System.out.println("Squre of rectangle is: " + rectangle.square(rectangle));
 
     }
-
-
 }

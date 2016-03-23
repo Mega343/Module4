@@ -32,10 +32,13 @@ public class Rectangle implements Figure {
         double result;
         result = name.getA() * name.getB();
         if(result <= 0){
-            System.out.println("Такого прямоугольника не существует.");
+            try {
+                throw new InvalidParametersOfFigureException();
+            } catch (InvalidParametersOfFigureException e) {
+                System.out.println("Invalid figure parametrs. This rectangle does not exist");
+            } return -1;
         }
         else
-            System.out.println("Плошадь прямоугольника = " + result);
         return  result;
     }
 

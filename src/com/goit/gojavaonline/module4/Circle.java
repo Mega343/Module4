@@ -24,10 +24,13 @@ public class Circle implements Figure {
         double result;
         result = PI*name.getR()*name.getR();
         if(result <= 0){
-            System.out.println("Такого круга не существует.");
+            try {
+                throw new InvalidParametersOfFigureException();
+            } catch (InvalidParametersOfFigureException e) {
+                System.out.println("Invalid figure parametrs. This circle does not exist");
+            } return -1;
         }
         else
-            System.out.println("Площадь круга = " + result);
         return result;
     }
 
