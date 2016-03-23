@@ -12,8 +12,8 @@ public class Main {
         Triangle triangle = new Triangle(6, 3, 2);
 
         System.out.println("Square of circle is: " + circle.square(circle));
-        System.out.println("Squre is triangle is: " + triangle.square(triangle));
-        System.out.println("Squre of rectangle is: " + rectangle.square(rectangle));
+        System.out.println("Square is triangle is: " + triangle.square(triangle));
+        System.out.println("Square of rectangle is: " + rectangle.square(rectangle));
 
     }
 }
