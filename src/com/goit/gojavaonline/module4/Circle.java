@@ -5,7 +5,6 @@ public class Circle implements Figure {
 
 
     double r;
-    public final double PI = 3.14;
 
     public Circle(double r){
         this.r = r;
@@ -22,7 +21,7 @@ public class Circle implements Figure {
     @Override
     public double square(Figure name) {
         double result;
-        result = PI*name.getR()*name.getR();
+        result = Math.PI*name.getR()*name.getR();
         if(result <= 0){
             try {
                 throw new InvalidParametersOfFigureException();
